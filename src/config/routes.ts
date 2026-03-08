@@ -1,29 +1,40 @@
-import { createBrowserRouter } from 'react-router';
-import Layout from '../layout/Layout';
-import { Dashboard } from '../pages/Dashboard';
-import { Home } from '../pages/Home';
+import { createBrowserRouter } from "react-router";
+import Layout from "../layout/Layout";
+import { Dashboard } from "../pages/Dashboard";
+import { Home } from "../pages/Home";
+import Students from "../pages/Students";
 
 export const routes = createBrowserRouter([
   {
-    id: 'home',
+    id: "home",
     children: [
       {
-        path: '/',
+        path: "/",
         Component: Home,
       },
       {
-        path: '/home',
+        path: "/home",
         Component: Home,
       },
     ],
   },
   {
-    id: 'public',
+    id: "public",
     Component: Layout,
     children: [
       {
-        path: '/dashboard',
+        path: "/dashboard",
         Component: Dashboard,
+      },
+    ],
+  },
+  {
+    id: "students",
+    Component: Layout,
+    children: [
+      {
+        path: "/students",
+        Component: Students,
       },
     ],
   },
