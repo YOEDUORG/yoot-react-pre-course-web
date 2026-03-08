@@ -1,3 +1,5 @@
+# Full Name - To Nguyen Gia Han
+# Email - Thienhav3011@gmail.com
 # YOOEDU - Education Center Management System
 
 ## Overview
