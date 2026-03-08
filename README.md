@@ -1,5 +1,7 @@
 # YOOEDU - Education Center Management System
 
+Nguyen Thanh Nhan - nguyenthanhnhan21042004@gmail.com
+
 ## Overview
 
 YOOEDU is a comprehensive education center management system designed to streamline administrative operations for educational institutions. This project serves as the practical foundation for a React development pre-course, providing students with hands-on experience building a real-world application using industry-standard technologies.
