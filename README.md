@@ -1,3 +1,6 @@
+Trần Đại Vỹ
+daivydev.official@gmail.com
+
 # YOOEDU - Education Center Management System
 
 ## Overview
