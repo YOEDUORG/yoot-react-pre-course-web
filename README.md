@@ -1,3 +1,5 @@
+# Họ và tên : Đinh Viết Huy
+# gamil     : dinhhuy22082004@gmail.com
 # YOOEDU - Education Center Management System
 
 ## Overview
