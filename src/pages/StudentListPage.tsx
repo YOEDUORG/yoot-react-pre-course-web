@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { Mars, Venus } from "lucide-react";
+
 import { studentService } from "../services/studentService";
 import type { Student } from "../model/student";
 
 import StatusToggle from "../components/shared/StatusToggle";
 import StudentActions from "../components/shared/StudentActions";
 import StudentForm from "../components/shared/StudentForm";
+
 
 export default function StudentListPage() {
   const [students, setStudents] = useState<Student[]>([]);
@@ -116,19 +119,19 @@ export default function StudentListPage() {
   
   {/* Header */}
 <div className="grid grid-cols-7 bg-gray-100 font-semibold">
-  <div className="p-3">ID</div>
+  <div className="text-center p-3">ID</div>
   <div className="p-3 col-span-2">Name</div>
   <div className="p-3">Enrollment</div>
-  <div className="p-3">Gender</div>
-  <div className="p-3">Status</div>
+  <div className="p-3 text-center">Gender</div>
+  <div className="p-3 text-center">Status</div>
   <div className="p-3">Actions</div>
 </div>
 
 {/* Body */}
 {students.map((s) => (
-  <div key={s.id} className="grid grid-cols-7 border-t items-center">
+  <div key={s.id} className="grid grid-cols-7 items-center">
     
-    <div className="p-3">{s.id}</div>
+    <div className="text-center p-3">{s.id}</div>
 
     <div className="p-3 col-span-2">
       <b>{s.first_name} {s.last_name}</b>
@@ -137,9 +140,11 @@ export default function StudentListPage() {
     </div>
 
     <div className="p-3">{s.enrollment_date}</div>
-    <div className="p-3">{s.gender}</div>
+    <div className="p-3 ">
+        {s.gender === "Male" ? <Mars className="text-blue-500" /> : <Venus className="text-pink-500" />}
+    </div>
 
-    <div className="p-3">
+    <div className="p-3 text-center">
       <StatusToggle
         active={s.is_active}
         onToggle={() => toggleStudent(s.id)}
