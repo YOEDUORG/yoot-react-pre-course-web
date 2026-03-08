@@ -1,3 +1,5 @@
+# Lâm Bảo Châu
+# cheryle2112@gmail.com
 # YOOEDU - Education Center Management System
 
 ## Overview
