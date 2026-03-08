@@ -1,8 +1,11 @@
-import { GraduationCap, LayoutDashboard } from 'lucide-react';
-import { useNavigate } from 'react-router';
+import { GraduationCap, LayoutDashboard ,Users  } from 'lucide-react';
+import { useNavigate , NavLink} from 'react-router';
 
 function Sidebar() {
   const navigate = useNavigate();
+  const linkBase = 'flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg';
+  const linkActive = 'bg-blue-50 text-blue-600';
+  const linkInactive = 'text-gray-900 hover:bg-gray-100';
 
   const onMenuToggle = () => {
     navigate('/home');
@@ -21,10 +24,26 @@ function Sidebar() {
       <nav className='p-4'>
         <ul className='space-y-2'>
           <li>
-            <a href='#' className='flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg'>
+            <NavLink
+              to='/dashboard'
+              className={({ isActive }) =>
+                `${linkBase} ${isActive ? linkActive : linkInactive}`
+              }
+            >
               <LayoutDashboard className='w-5 h-5' />
               Dashboard
-            </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/students'
+              className={({ isActive }) =>
+                `${linkBase} ${isActive ? linkActive : linkInactive}`
+              }
+            >
+              <Users className='w-5 h-5' />
+              Students
+            </NavLink>
           </li>
         </ul>
       </nav>
