@@ -1,4 +1,4 @@
-import { GraduationCap, LayoutDashboard } from 'lucide-react';
+import { GraduationCap, LayoutDashboard, Users2 } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
 function Sidebar() {
@@ -21,9 +21,13 @@ function Sidebar() {
       <nav className='p-4'>
         <ul className='space-y-2'>
           <li>
-            <a href='#' className='flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg'>
-              <LayoutDashboard className='w-5 h-5' />
+              <a href='/dashboard' className='flex items-center gap-3 px-4 py-2.5 text-sm font-medium bg-gray-100 rounded-lg hover:bg-gray-200'>
+                <LayoutDashboard className='w-5 h-5' />
               Dashboard
+            </a>
+            <a href="/students" className='flex items-center gap-3 px-4 py-2.5 text-sm font-medium bg-gray-100 rounded-lg hover:bg-gray-200'>
+              <Users2 className='w-5 h-5' />
+              Students
             </a>
           </li>
         </ul>
